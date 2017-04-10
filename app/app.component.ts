@@ -3,11 +3,14 @@ import { Component } from '@angular/core';
 @Component ({
 	selector: 'my-app',
 	template: `
-	<div class="page-header text-center"><h3>{{title}}</h3></div>
-	<ul class="nav nav-pills">
-  		<li role="presentation"><a routerLink = "/dashboard">Dashboard</a></li>
-  		<li role="presentation"><a routerLink = "/crimes">Crimes</a></li>
+	<div class="">
+	<ul class="nav nav-tabs">
+		<li role="presentation"><a routerLink = "/inserirCrimes">Denunciar Crimes</a></li>
+  		<li role="presentation"><a routerLink = "/dashboard">Painel de Vítimas</a></li>
+  		<li role="presentation"><a routerLink = "/crimes">Detalhe do Crime</a></li>
 	</ul>
+	</div>
+	<div class="page-header text-center"><h4><strong>{{title}}</strong></h4></div>
 	<router-outlet></router-outlet>`
 })
 

@@ -1,0 +1,74 @@
+<div class="container">
+	<div class="row">
+		<div class="alert alert-success" role="alert" *ngIf ="sucesso"><strong> Formulário enviado com sucesso!</strong>
+			<br/>
+			{{debug()}}
+		</div>
+		<div class="col-sm-6">
+				<form *ngIf="!sucesso"(ngSubmit) = "enviar()">
+					<div class="form-group">
+						<label class="control-label" for="cidade">Cidade da ocorrência do crime</label>
+						<select class="form-control input-sm" name="cidade" required [(ngModel)] = "crime.cidade">
+							<option value=""></option>
+							<option *ngFor = "let cidade of cidades" [value] = "cidade.nomecidades">{{cidade.nomecidades}}</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="data_ocorrencia">Data de ocorrência</label>
+						<input type="date" class="form-control input-sm" name="data_ocorrencia" required [(ngModel)] = "crime.data">
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="idade">Idade</label>
+						<input type="number" class="form-control input-sm" name="idade" placeholder="Informe a idade da vítima" required [(ngModel)] = "crime.idade">
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="nome">Nome</label>
+						<input type="text" class="form-control input-sm" name="nome" placeholder="Informe o nome completo da vítima" required [(ngModel)] = "crime.nome_vitima">
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="objeto_utilizado">Objeto utilizado</label>
+						<select class="form-control input-sm" name="objeto_utilizado" required [(ngModel)] = "crime.objeto_utilizado">
+							<option></option>
+							<option>ARMA DE FOGO</option>
+							<option>ARMA BRANCA</option>
+							<option>OUTRO TIPO DE OBJETO</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="quantidade_vitima">Quantidade de vítimas</label>
+						<input type="number" name="quantidade_vitima" class="form-control input-sm" min="1" max="100" placeholder="Informe a quantidade de vítimas" required [(ngModel)] = "crime.qtd_vitimas">
+					</div>
+
+					<div class="form-group">
+						<label>Sexo</label><br>
+						<label class="radio-inline">
+							<input type="radio" name="sexo" value="masculino" required [(ngModel)] = "crime.sexo">Masculino
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="sexo" value="feminino" required [(ngModel)] = "crime.sexo">Feminino
+						</label>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="tipo_crime">Tipo de crime</label>
+						<select class="form-control input-sm" name="tipo_crime" required [(ngModel)] = "crime.tipo_crime">
+							<option></option>
+							<option>ASSALTO À MÃO ARMADA</option>
+							<option>LATROCÍNIO</option>
+							<option>HOMICÍDIO</option>
+							<option>LESÕES CORPORAIS SEGUIDAS DE MORTE</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">Enviar</button>
+					</div>
+			</form>
+		</div>
+	</div>
+</div>

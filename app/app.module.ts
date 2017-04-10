@@ -9,6 +9,7 @@ import { AppComponent }  from './app.component';
 import {CrimeDetailComponent} from './crime-detail.component';
 import {DashboardComponent} from './dashboard.component';
 import {CrimesComponent} from './crimes.component';
+import {FormInserirCrimeComponent} from './form-inserir-crimes.component';
 
 import { PagerService } from './_services/index';
 import {CrimeService} from './_services/crime.service';
@@ -35,6 +36,10 @@ import {CrimeService} from './_services/crime.service';
             {
                 path: 'detail/:id',
                 component: CrimeDetailComponent
+             },
+             {
+                 path: 'inserirCrimes',
+                 component: FormInserirCrimeComponent
              }
         
         ])
@@ -43,7 +48,8 @@ import {CrimeService} from './_services/crime.service';
         AppComponent,
         CrimeDetailComponent,
         DashboardComponent,
-        CrimesComponent
+        CrimesComponent,
+        FormInserirCrimeComponent
     ],
     providers: [
         PagerService,

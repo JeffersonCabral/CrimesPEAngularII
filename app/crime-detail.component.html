@@ -1,14 +1,14 @@
   <div *ngIf="crime">
     <h4>{{crime.nome_vitima}}</h4>
   	<div class="col-sm-4 input-group-sm">
-      <div><label class="control-label">Id: </label>{{crime.id}}</div>
-      <div><label class="control-label">Cidade: </label>{{crime.cidade}}</div>
-      <div><label class="control-label">Data: </label>{{crime.data}}</div>
-      <div><label class="control-label">Arma utilizada: </label>{{crime.objeto_utilizado}}</div>
-      <div><label class="control-label">Idade: </label>{{crime.idade}}</div>
-      <div><label class="control-label">Quantidade de vítimas: </label>{{crime.qtd_vitimas}}</div>
-      <div><label class="control-label">Sexo: </label>{{crime.sexo}}</div>
-      <div><label class="control-label">Tipo de crime: </label>{{crime.tipo_crime}}</div>
+      <div><label class="control-label">Id: </label> {{crime.id}} </div>
+      <div><label class="control-label">Cidade: </label> {{crime.cidade}} </div>
+      <div><label class="control-label">Data: </label> {{crime.data}} </div>
+      <div><label class="control-label">Arma utilizada: </label> {{crime.objeto_utilizado}} </div>
+      <div><label class="control-label">Idade: </label> {{crime.idade}} </div>
+      <div><label class="control-label">Quantidade de vítimas: </label> {{crime.qtd_vitimas}} </div>
+      <div><label class="control-label">Sexo: </label> {{crime.sexo}} </div>
+      <div><label class="control-label">Tipo de crime: </label> {{crime.tipo_crime}} </div>
   		<label class="control-label" for="nome_vitima">Nome: </label>
     	<input class="form-control" name="nome_vitima" id="nome_vitima" [(ngModel)] = "crime.nome_vitima">
     	
